@@ -1,0 +1,4 @@
+
+In this folder it is uploaded all the dataset used for the analysis.
+
+There are different datasets for different used stocks.
