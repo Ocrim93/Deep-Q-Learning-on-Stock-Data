@@ -2,6 +2,7 @@ from plotly.graph_objs import *
 from plotly.offline import  iplot
 import datetime
 import pandas_datareader as web
+from plotly import tools
 
 # train_test_array  = [train_array,test_array] 
 # date_split = the date that separates train from  test
@@ -21,7 +22,15 @@ def plot_train_test(train_test_array,date_split):
 	figure = Figure(data=data, layout=layout)
 	iplot(figure)
 
+def plot_loss_reward(total_losses,total_rewards):
 
+    figure = tools.make_subplots(rows=1,cols=2,subplot_titles=('loss','reward'),print_grid=False)
+    figure.append_trace(Scatter(y=total_losses,mode='lines',line=dict(color='skyblue')),1,1)
+    figure.append_trace(Scatter(y=total_losses,mode='lines',line=dict(color='orange')),1,2)
+    figure['layout']['xaxis1'].update(title='epoch')
+    figure['layout']['xaxis2'].update(title='epoch')
+    figure['layout'].update(height=400,width = 900,showlegend =True)
+    iplot(figure)
 
 def retrieveData(stock_name, years):
     end = datetime.datetime.now()
