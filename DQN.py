@@ -9,7 +9,7 @@
 
 '''
 import chainer
-import chainer.links as L
+import chainer.links as L 
 import chainer.functions as F
 import time
 import numpy as np
