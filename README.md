@@ -1,4 +1,4 @@
-# Deep-Q-Learning-on-Stock-Data
+## Deep-Q-Learning-on-Stock-Data
 
 The best of deep learning and reinforcement learning to predict Stock price.
 
@@ -7,8 +7,10 @@ Reinforcement learning is the branch of machine learning that deals with this ty
 
 The exploitation/exploration trade-off plays a central role to reinforcement learning. We have been considering a decay factor $\beta=0.995$ that reduces the probability of exploration on trial.
 
-A ![#f03c15]`Link` is an object that holds parameters (i.e. optimization targets). It is an object that combines parameters and optimizes the parameters. The fundamental form of a link can be represented by a function whose arguments are parameters. On the most frequently used links is Linear link (a.k.a. *fully-connected layer* or *affine transformation*). It represents a mathematical function 
+# Link
+
+A *Link* is an object that holds parameters (i.e. optimization targets). It is an object that combines parameters and optimizes the parameters. The fundamental form of a link can be represented by a function whose arguments are parameters. On the most frequently used links is *Linear* link (a.k.a. *fully-connected layer* or *affine transformation*). It represents a mathematical function 
 ```math
  f(x) = Wx+b 
  ```
-where the matrix $W$ and the vector $b$ are parameters. 
+where the matrix $W$ and the vector $b$ are parameters. The parameters of a link are stored as attributes as instance of *Variable*. $W$ is initialized randomly, whereas $b$ is initialized with zeros.
