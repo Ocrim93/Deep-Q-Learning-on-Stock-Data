@@ -14,3 +14,5 @@ A *Link* is an object that holds parameters (i.e. optimization targets). It is a
  f(x) = Wx+b 
  ```
 where the matrix $W$ and the vector $b$ are parameters. The parameters of a link are stored as attributes as instance of *Variable*. $W$ is initialized randomly, whereas $b$ is initialized with zeros. Gradients of parameters are computed by the *backward()* method. Note that gradients are accumulated by the method rather than overwritten. So run first *cleargrads()* method.
+
+# Chain
