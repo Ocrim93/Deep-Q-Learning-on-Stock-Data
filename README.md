@@ -17,7 +17,7 @@ where the matrix $W$ and the vector $b$ are parameters. The parameters of a link
 
 Non-linear activation used is *relu()* function, namely,
 ```math
-g(z) = max(0,z)   \quad g'(x) = \begin{cases} 1 & z > 0 //
+g(z) = max(0,z)   \quad g'(z) = \begin{cases} 1 & z > 0 \\
                                               0 & \text{otherwise}  \end{cases}
 ``` 
 
