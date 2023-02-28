@@ -15,6 +15,12 @@ A *Link* is an object that holds parameters (i.e. optimization targets). It is a
  ```
 where the matrix $W$ and the vector $b$ are parameters. The parameters of a link are stored as attributes as instance of *Variable*. $W$ is initialized randomly, whereas $b$ is initialized with zeros. Gradients of parameters are computed by the *backward()* method. Note that gradients are accumulated by the method rather than overwritten. So run first *cleargrads()* method.
 
+Non-linear activation used is *relu()* function, namely,
+```math
+g(z) = max(0,z)   \quad g'(x) = \begin{cases} 1 & z > 0 //
+                                              0 & \text{otherwise}  \end{cases}
+``` 
+
 # Chain
 
 A *Chain*
